@@ -12,13 +12,13 @@ export class DataStorageService {
 
   storeRecipes() {
     const recipes = this.recipeService.getRecipes();
-    this.http.put(environment.firebase_url, recipes).subscribe((response) => {
+    this.http.put(environment.firebase_api, recipes).subscribe((response) => {
       console.log(response);
     });
   }
 
   fetchRecipes() {
-    return this.http.get<Recipe[]>(environment.firebase_url).pipe(
+    return this.http.get<Recipe[]>(environment.firebase_api).pipe(
       map((recipes) => {
         return recipes.map((recipe) => {
           return {

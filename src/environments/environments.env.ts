@@ -1,4 +1,6 @@
 export const environment = {
-  production: false,
-  firebase_url: '',
+  production: true,
+  firebase_api: '',
+  firebase_signUp_api: '',
+  firebase_signIn_api: '',
 };
