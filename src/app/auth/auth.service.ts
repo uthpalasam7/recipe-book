@@ -26,11 +26,15 @@ export class AuthService {
 
   signup(email: string, password: string) {
     return this.http
-      .post<AuthResponseData>(environment.firebase_signUp_api, {
-        email: email,
-        password: password,
-        returnSecureToken: true,
-      })
+      .post<AuthResponseData>(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' +
+          environment.firebaseApiKey,
+        {
+          email: email,
+          password: password,
+          returnSecureToken: true,
+        }
+      )
       .pipe(
         catchError(this.handleError),
         tap((resData) => {
@@ -46,11 +50,15 @@ export class AuthService {
 
   login(email: string, password: string) {
     return this.http
-      .post<AuthResponseData>(environment.firebase_signIn_api, {
-        email: email,
-        password: password,
-        returnSecureToken: true,
-      })
+      .post<AuthResponseData>(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' +
+          environment.firebaseApiKey,
+        {
+          email: email,
+          password: password,
+          returnSecureToken: true,
+        }
+      )
       .pipe(
         catchError(this.handleError),
         tap((resData) => {
