@@ -2,9 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0-rc.5.
 
+## Demo
+
+Check out the live demo [here](https://ng-recipe-book-4db5e.web.app).
+
 ## Usage
 
-Rename "src/environments/environments.env.prod.ts" and "src/environments/environments.env.ts" to "src/environments/environments.prod.ts" and "src/environments/environments.ts" and update the values/settings to your own.
+Rename "src/environments/environments.env.prod.ts" and "src/environments/environments.env.ts" to "src/environments/environments.prod.ts" and "src/environments/environments.ts" and add your own firebaseApiKey.
 
 ## Development server
 
