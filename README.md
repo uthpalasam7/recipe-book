@@ -6,6 +6,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Check out the live demo [here](https://ng-recipe-book-4db5e.web.app).
 
+**Login credentials:**
+
+- **Email:** user@test.com
+- **Password:** 111111
+
 ## Usage
 
 Rename "src/environments/environments.env.prod.ts" and "src/environments/environments.env.ts" to "src/environments/environments.prod.ts" and "src/environments/environments.ts" and add your own firebaseApiKey.
